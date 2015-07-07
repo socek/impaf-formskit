@@ -9,8 +9,8 @@ from impaf.testing import ControllerFixture
 class FormskitControllerFixture(ControllerFixture):
 
     @yield_fixture
-    def madd_form(self, controller):
-        patcher = patch.object(controller, 'add_form')
+    def madd_form(self, testable):
+        patcher = patch.object(testable, 'add_form')
         with patcher as mock:
             yield mock
 

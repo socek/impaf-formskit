@@ -13,7 +13,6 @@ class PostForm(Form, BeakerRequestable):
         super().__init__()
 
         self.add_form_validator(CsrfMustMatch())
-        self.init_csrf()
 
     def reset(self):
         super().reset()

@@ -2,10 +2,11 @@ from mock import patch
 
 from pytest import fixture
 from pytest import yield_fixture
-from pytest import mark
 
+from impaf.testing import ControllerCase
 from impaf.testing import ControllerFixture
 from impaf.testing import RequestFixture
+from impaf.testing import cache
 
 
 class FormskitControllerFixture(ControllerFixture):
@@ -26,3 +27,14 @@ class FormFixture(RequestFixture):
     @fixture
     def testable(self, mrequest, registry):
         return self._testable_cls(mrequest)
+
+
+class FormskitControllerCase(ControllerCase):
+
+    @cache
+    def madd_form(self):
+        return self.pobject(self.object(), 'add_form')
+
+    @cache
+    def mform(self):
+        return self.madd_form().return_value

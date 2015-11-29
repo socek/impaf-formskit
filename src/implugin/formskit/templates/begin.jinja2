@@ -4,6 +4,9 @@
     {%- if style != None %}
         style="{{style}}"
     {%- endif -%}
+    {%- if class != None %}
+        class="{{class}}"
+    {%- endif -%}
     {%- if id %} id="{{id}}"{% endif -%}
     >
     <input type="hidden" name="form_name" value="{{name}}" />

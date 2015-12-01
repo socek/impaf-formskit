@@ -36,5 +36,13 @@ class FormskitControllerCase(ControllerCase):
         return self.pobject(self.object(), 'add_form')
 
     @cache
+    def madd_form_widget(self):
+        return self.pobject(self.object(), 'add_form_widget')
+
+    @cache
     def mform(self):
         return self.madd_form().return_value
+
+    @cache
+    def mform_widget(self):
+        return self.madd_form_widget().return_value

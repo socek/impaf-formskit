@@ -10,7 +10,7 @@ install_requires = [
 if __name__ == '__main__':
     setup(
         name='impaf-formskit',
-        version='0.1.1',
+        version='0.1.2',
         description='Formskit plugin for Impaf.',
         license='Apache License 2.0',
         packages=find_packages('src'),

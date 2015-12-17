@@ -55,6 +55,8 @@ class FormWidget(MultiWidget):
         data['values'] = self.form.get_values(name)
         data['field'] = self.form.fields[name]
         data['templates'] = self.Templates
+        data['type'] = type
+        data['str'] = str
         return data
 
     def _input(
